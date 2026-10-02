@@ -1,4 +1,4 @@
-# Project Name
+# Industry Night Site
 ![insert alt text](images/example.jpg)
 
 The Industry Night website is an briefing of the event that will be held on April next year. It is basically a meeting of coat makers.

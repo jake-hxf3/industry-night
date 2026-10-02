@@ -1,5 +1,5 @@
 # Industry Night Site
-![insert alt text](images/fanshawe-logo.svg)
+![insert alt text](images/fanshawe-logo-white.svg)
 
 The Industry Night website is an briefing of the event that will be held on April next year. It is basically a meeting of coat makers.
 

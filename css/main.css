@@ -1,1 +1,74 @@
+/* 3. ---Main Nav--- */
+#main-header {
+    background-color: #fff;
+    padding-bottom: 10px;
+}
 
+#main-header > div {
+    align-items: center;
+    padding-top: 10px;
+}
+
+#main-logo {
+    display: flex;
+    justify-content: center;
+}
+    #main-logo img {
+        height: 60px;
+    }
+
+
+#burger {
+    background-image: url(../images/burger_menu.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 0;
+    cursor: pointer;
+}
+    #burger.clicked {
+        transform: rotate(90deg);
+    }
+
+#main-nav {
+    order: 4;
+}
+
+#burger-con {
+    display: none;
+    justify-content: space-evenly;
+}
+    #burger-con li {
+        border-radius: 50px;
+    }
+    #burger-con li:hover {
+        background-color: #c3c3c3;
+    }
+    #burger-con li a {
+        display: block;
+        padding: 10px 20px;
+        color: #692891;
+        font-weight: 600;
+    }
+
+#func-btn {
+    display: flex;
+    width: 70%;
+    justify-self: end;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#func-btn .ico{
+    width: clamp(32px, 8vw, 48px);
+}
+
+#search-btn {
+    display: none;
+}
+
+
+.collapsible {
+    display: flex !important; 
+    margin-top: 10px;
+}

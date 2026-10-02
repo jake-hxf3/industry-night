@@ -1,7 +1,7 @@
 # Project Name
 ![insert alt text](images/example.jpg)
 
-This is a project about [insert topic].
+The Industry Night website is an briefing of the event that will be held on April next year. It is basically a meeting of coat makers.
 
 ## Installation 💻
 No installation required, simply download the zip file and extract.
@@ -19,6 +19,6 @@ Open index.html in the browser of your choice and see the website.
 TODO: Write history
 ß
 ## Credits
-Russell
+Jake Russell
 ## License
 MIT License

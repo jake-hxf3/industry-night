@@ -47,7 +47,7 @@ body {
     height: 0;
     z-index: -1;
     transform: translateY(-5px);
-    transition: 0.5s all ease-out;
+    transition: 0.1s all ease-out;
     background-color: #ffff00;
 }
 

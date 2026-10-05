@@ -5,7 +5,9 @@
   /*font-size: clamp(12px, 2vw, 18px);*/
   --color1: #e02725;
   --bg-color1: #b6282f;
+  --v-color1: #ff1c18;
   --color2: #e3e3e3;
+  --v-color2: #ededed;
   --hover1: #f93f3f;
 }
 
@@ -105,6 +107,7 @@ body {
   #burger {
     display: none;
   }
+
   #main-header {
     padding-block: 20px;
   }
@@ -173,7 +176,7 @@ body {
 }
 
 .player-icon {
-    color: var(--color1);
+    color: var(--v-color1);
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -229,7 +232,7 @@ body {
 /******** Chrome, Safari, Opera and Edge Chromium styles ********/
 /* slider track */
 .video-range::-webkit-slider-runnable-track {
-  background-color: #ededed;
+  background-color: var(--v-color2);
   border-radius: 0.5rem;
   height: 0.5rem;
 }
@@ -238,7 +241,7 @@ body {
 .video-range::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
-  background-color: var(--color1);
+  background-color: var(--v-color1);
   transition: 0.2s all linear;
 }
 
@@ -249,7 +252,7 @@ body {
 }
 
 .video-range:focus-visible::-webkit-slider-thumb {
-  outline: 2px solid white;
+  outline: 2px solid var(--v-color2);
   outline-offset: 0.125rem;
 } 
 
@@ -285,7 +288,7 @@ body {
 
 
 #timeseek::-webkit-slider-thumb {
-  border: var(--color2) 3px solid;
+  border: var(--v-color2) 3px solid;
   margin-top: -6px;
   border-radius: 50%;
   height: 1.5rem;
@@ -293,21 +296,21 @@ body {
 }
 
 #timeseek:not(:hover)::-webkit-slider-thumb {
-  border: var(--color2) 3px solid;
+  border: var(--v-color2) 3px solid;
   background-color: transparent;
 }
 
 /*********** Firefox styles ***********/
 /* slider track */
 .video-range::-moz-range-track {
-  background-color: #ededed;
+  background-color: var(--v-color2);
   border-radius: 0.5rem;
   height: 0.5rem;
 }
 
 /* slider thumb */
 .video-range::-moz-range-thumb {
-  background-color: var(--color1);
+  background-color: var(--v-color1);
   border: none; /*Removes extra border that FF applies*/
 }
 
@@ -317,7 +320,7 @@ body {
 }
 
 .video-range:focus::-moz-range-thumb{
-  outline: 2px solid white;
+  outline: 2px solid var(--v-color2);
   outline-offset: 0.125rem;
 }
 
@@ -328,14 +331,14 @@ body {
 }
 
 #timeseek::-moz-range-thumb {
-  border: var(--color2) 3px solid;
+  border: var(--v-color2) 3px solid;
   border-radius: 50%;
   height: 1.5rem;
   width: 1.5rem;
 }
 
 #timeseek:not(:hover)::-moz-range-thumb {
-  border: var(--color2) 3px solid;
+  border: var(--v-color2) 3px solid;
   background-color: transparent;
 }
 

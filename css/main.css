@@ -6,7 +6,7 @@ body {
 
 #main-header {
     background-color: #ff00ff;
-    padding-bottom: 10px; 
+    padding-block: 15px;
     -webkit-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.38); 
     box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.38);
     transition: 0.5s 0.1s all linear;
@@ -14,17 +14,21 @@ body {
 
 #main-header > div {
     align-items: center;
-    padding-top: 10px;
-
 }
 
 #main-logo {
     display: flex;
     justify-content: center;
 }
-    #main-logo img {
-        height: 60px;
-    }
+  #main-logo .fanshawe-logo {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/fanshawe-icon.svg);
+  }
+
 
 
 #burger {
@@ -90,6 +94,11 @@ body {
         display: none;
     }
 }
+
+
+
+
+
 
 /* Video Player */
 .custom-video {
@@ -370,6 +379,16 @@ body {
 @media (pointer:none), (pointer:coarse) {
   .video-controls button:focus-visible{
     outline: none;
+  }
+}
+
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+  #main-logo .fanshawe-logo {
+    width: 100%;
+    height: 50px;
+    background-image: url(../images/fanshawe-logo.svg);
   }
 }
 

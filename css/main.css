@@ -16,17 +16,21 @@ body {
 }
 
 #main-header {
-    background-color: white;
-    padding-block: 15px;
-    -webkit-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.38); 
-    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.38);
     transition: 0.25s 0.1s all cubic-bezier(.7,.68,.22,1.0);
-    position: relative;
-    z-index: 10;
 }
 
-#main-header > div {
-    align-items: center;
+#main-header .grid-con {
+  padding: 0;
+}
+
+#main-header .subgrid-con {
+  padding: 15px;
+  background-color: white;
+  align-items: center;
+  position: relative;
+  -webkit-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.38); 
+  box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.38);
+  z-index: 10;
 }
 
 #main-logo {
@@ -60,16 +64,16 @@ body {
     }
 
 #main-nav {
-    transition: 0.5s all cubic-bezier(.7,.68,.22,1.0);
     transform: translateY(-100%);
-    background-color: var(--color1);
+    transition: 0.5s all cubic-bezier(.7,.68,.22,1.0);
+    background-color: var(--bg-color1);
 }
 
 
 #burger-con {
     list-style: none;
     padding: 0;
-    margin: 0 0 10px 0;
+    margin: 15px 0 10px 0;
 }
     #burger-con li {
       width: 100%;
@@ -91,15 +95,6 @@ body {
     #burger-con li:hover a {
         color: var(--bg-color1);
     }
-
-#burger-con.collapsible {
-    display: block;
-    margin-top: 20px;
-}
-
-#burger-con.nojs {
-  display: flex;
-}
 
 #main-nav:has(.collapsible) {
   transform: translateY(0);
@@ -123,6 +118,12 @@ body {
     background-image: url(../images/fanshawe-logo.svg);
   }
 
+  #main-header .subgrid-con {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
   #main-header:hover {
     background-color: var(--bg-color1);
   }
@@ -130,7 +131,22 @@ body {
   #main-header:hover #main-logo .fanshawe-logo {
     background-image: url(../images/fanshawe-logo-white.svg);
   }
+
+  #main-nav {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  #burger-con {
+    display: flex;
+    background-color: transparent;
+  }
 }
+
+
+
+
 
 
 

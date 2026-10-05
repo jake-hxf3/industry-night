@@ -1,7 +1,6 @@
 const burger = document.querySelector("#burger");
 const nav = document.querySelector("#burger-con");
 
-nav.classList.remove("nojs");
 nav.classList.remove("collapsible");
 
 

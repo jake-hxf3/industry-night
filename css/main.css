@@ -1,4 +1,13 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  font-size: clamp(12px, 2vw, 18px);
+  --color1: #e02725;
+  --bg-color1: #b6282f;
+  --color2: #e3e3e3;
+  --hover1: #f93f3f;
+}
 
 body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -51,7 +60,7 @@ body {
 #main-nav {
     transition: 0.5s all cubic-bezier(.7,.68,.22,1.0);
     transform: translateY(-100%);
-    background-color: #e02725;
+    background-color: var(--color1);
     -webkit-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.2); 
     box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.2);
 }
@@ -79,7 +88,7 @@ body {
         transition: 0.2s all ease-out;
     }
     #burger-con li:hover a {
-        color: #b6282f;
+        color: var(--bg-color1);
     }
 
 #burger-con.collapsible {
@@ -100,6 +109,10 @@ body {
 
 /* Media Queries */
 @media screen and (min-width: 768px) {
+  #main-header {
+    padding-block: 20px;
+  }
+
   #main-logo .fanshawe-logo {
     width: 100%;
     height: 50px;
@@ -119,7 +132,7 @@ body {
 }
 
 .custom-video video::cue {
-  background-color: red;
+  background-color: var(--color1);
 }
 
 
@@ -164,7 +177,7 @@ body {
 }
 
 .player-icon {
-    color: red;
+    color: var(--color1);
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -229,14 +242,14 @@ body {
 .video-range::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
-  background-color: red;
+  background-color: var(--color1);
   transition: 0.2s all linear;
 }
 
 
 
 .video-range::-webkit-slider-thumb:hover {
-  background-color: #f93f3f;
+  background-color: var(--hover1);
 }
 
 .video-range:focus-visible::-webkit-slider-thumb {
@@ -276,7 +289,7 @@ body {
 
 
 #timeseek::-webkit-slider-thumb {
-  border: #e3e3e3 3px solid;
+  border: var(--color2) 3px solid;
   margin-top: -6px;
   border-radius: 50%;
   height: 1.5rem;
@@ -284,7 +297,7 @@ body {
 }
 
 #timeseek:not(:hover)::-webkit-slider-thumb {
-  border: #e3e3e3 3px solid;
+  border: var(--color2) 3px solid;
   background-color: transparent;
 }
 
@@ -298,13 +311,13 @@ body {
 
 /* slider thumb */
 .video-range::-moz-range-thumb {
-  background-color: red;
+  background-color: var(--color1);
   border: none; /*Removes extra border that FF applies*/
 }
 
 .video-range::-moz-range-thumb:hover {
   transition: 0.2s all linear;
-  background-color: #f93f3f;
+  background-color: var(--hover1);
 }
 
 .video-range:focus::-moz-range-thumb{
@@ -319,14 +332,14 @@ body {
 }
 
 #timeseek::-moz-range-thumb {
-  border: #e3e3e3 3px solid;
+  border: var(--color2) 3px solid;
   border-radius: 50%;
   height: 1.5rem;
   width: 1.5rem;
 }
 
 #timeseek:not(:hover)::-moz-range-thumb {
-  border: #e3e3e3 3px solid;
+  border: var(--color2) 3px solid;
   background-color: transparent;
 }
 

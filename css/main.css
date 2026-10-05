@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  font-size: clamp(12px, 2vw, 18px);
+  /*font-size: clamp(12px, 2vw, 18px);*/
   --color1: #e02725;
   --bg-color1: #b6282f;
   --color2: #e3e3e3;
@@ -100,15 +100,11 @@ body {
   transform: translateY(0);
 }
 
-
-@media screen and (min-width: 768px) {
-    #burger {
-        display: none;
-    }
-}
-
 /* Media Queries */
 @media screen and (min-width: 768px) {
+  #burger {
+    display: none;
+  }
   #main-header {
     padding-block: 20px;
   }

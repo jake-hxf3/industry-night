@@ -5,7 +5,7 @@ body {
 }
 
 #main-header {
-    background-color: #ff00ff;
+    background-color: white;
     padding-block: 15px;
     -webkit-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.38); 
     box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.38);
@@ -51,14 +51,15 @@ body {
 #main-nav {
     transition: 0.5s all cubic-bezier(.7,.68,.22,1.0);
     transform: translateY(-100%);
-    background-color: white;
-    -webkit-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.38); 
-    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.38);
+    background-color: #e02725;
+    -webkit-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.2); 
+    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.2);
 }
 
 #burger-con {
     list-style: none;
     padding: 0;
+    margin: 0 0 10px 0;
 }
     #burger-con li {
       width: 100%;
@@ -66,15 +67,19 @@ body {
       text-align: center;
       cursor: pointer;
       padding: 10px 0;
-      transition: 0.5s background-color ease-out;
+      transition: 0.2s all ease-out;
     }
     #burger-con li:hover{
-        background-color: #c3c3c3;
+        background-color: white;
     }
     #burger-con li a {
-        color: #ff2333;
+        color: white;
         font-weight: 600;
         text-decoration: none;
+        transition: 0.2s all ease-out;
+    }
+    #burger-con li:hover a {
+        color: #b6282f;
     }
 
 #burger-con.collapsible {

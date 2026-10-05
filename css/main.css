@@ -5,8 +5,12 @@
   /*font-size: clamp(12px, 2vw, 18px);*/
   --color1: #e02725;
   --bg-color1: #b6282f;
+  --bg-color2: #eb3e47;
+  --v-color1: #ff1c18;
   --color2: #e3e3e3;
+  --v-color2: #ededed;
   --hover1: #f93f3f;
+  --text-col1: #333333;
 }
 
 body {
@@ -14,17 +18,21 @@ body {
 }
 
 #main-header {
-    background-color: white;
-    padding-block: 15px;
-    -webkit-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.38); 
-    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.38);
-    transition: 0.5s 0.1s all linear;
-    position: relative;
-    z-index: 10;
+    transition: 0.25s 0.1s all cubic-bezier(.7,.68,.22,1.0);
 }
 
-#main-header > div {
-    align-items: center;
+#main-header .grid-con {
+  padding: 0;
+}
+
+#main-header .subgrid-con {
+  padding: 15px;
+  background-color: white;
+  align-items: center;
+  position: relative;
+  -webkit-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.38); 
+  box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.38);
+  z-index: 10;
 }
 
 #main-logo {
@@ -58,21 +66,21 @@ body {
     }
 
 #main-nav {
-    transition: 0.5s all cubic-bezier(.7,.68,.22,1.0);
     transform: translateY(-100%);
-    background-color: var(--color1);
-    -webkit-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.2); 
-    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.2);
+    transition: 0.5s all cubic-bezier(.7,.68,.22,1.0);
+    background-color: var(--bg-color1);
 }
+
 
 #burger-con {
     list-style: none;
     padding: 0;
-    margin: 0 0 10px 0;
+    margin: 15px 0 10px 0;
 }
     #burger-con li {
       width: 100%;
-      display: block;
+      display: grid;
+      place-items: center;
       text-align: center;
       cursor: pointer;
       padding: 10px 0;
@@ -91,13 +99,10 @@ body {
         color: var(--bg-color1);
     }
 
-#burger-con.collapsible {
-    display: block;
-    margin-top: 20px;
-}
-
 #main-nav:has(.collapsible) {
   transform: translateY(0);
+  -webkit-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.2); 
+  box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.2);
 }
 
 /* Media Queries */
@@ -105,16 +110,77 @@ body {
   #burger {
     display: none;
   }
+
   #main-header {
-    padding-block: 20px;
+    background-color: white;
+    -webkit-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.38); 
+    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.38);
   }
 
   #main-logo .fanshawe-logo {
-    width: 100%;
-    height: 50px;
+    width: 70%;
+    height: 60px;
+    background-size: contain;
     background-image: url(../images/fanshawe-logo.svg);
   }
+
+  #main-header .subgrid-con {
+    padding-block: 20px;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  #main-header:hover {
+    background-color: var(--bg-color1);
+  }
+
+  #main-header:hover #main-logo .fanshawe-logo {
+    background-image: url(../images/fanshawe-logo-white.svg);
+  }
+
+  #main-nav {
+    transform: translateY(0);
+    background-color: transparent;
+  }
+
+  #main-nav:has(.collapsible){
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  #burger-con {
+    display: flex;
+    margin: 0;
+    height: 100%;
+    justify-content: end;
+    background-color: transparent;
+  }
+    #burger-con li {
+      height: 100%;
+      width: fit-content;
+      padding-inline: 25px;
+    }
+    #burger-con li:hover {
+      background-color: white;
+    }
+    #burger-con li a {
+      color: var(--text-col1);
+      font-size: 1.15rem;
+      font-weight: 500;
+    }
+    #main-header:hover #burger-con li a {
+      color: white;
+    }
+    #main-header #burger-con li:hover a {
+      color: var(--bg-color1);
+      font-weight: 700;
+    }
 }
+
+
+
+
 
 
 
@@ -173,7 +239,7 @@ body {
 }
 
 .player-icon {
-    color: var(--color1);
+    color: var(--v-color1);
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -229,7 +295,7 @@ body {
 /******** Chrome, Safari, Opera and Edge Chromium styles ********/
 /* slider track */
 .video-range::-webkit-slider-runnable-track {
-  background-color: #ededed;
+  background-color: var(--v-color2);
   border-radius: 0.5rem;
   height: 0.5rem;
 }
@@ -238,7 +304,7 @@ body {
 .video-range::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
-  background-color: var(--color1);
+  background-color: var(--v-color1);
   transition: 0.2s all linear;
 }
 
@@ -249,7 +315,7 @@ body {
 }
 
 .video-range:focus-visible::-webkit-slider-thumb {
-  outline: 2px solid white;
+  outline: 2px solid var(--v-color2);
   outline-offset: 0.125rem;
 } 
 
@@ -285,7 +351,7 @@ body {
 
 
 #timeseek::-webkit-slider-thumb {
-  border: var(--color2) 3px solid;
+  border: var(--v-color2) 3px solid;
   margin-top: -6px;
   border-radius: 50%;
   height: 1.5rem;
@@ -293,21 +359,21 @@ body {
 }
 
 #timeseek:not(:hover)::-webkit-slider-thumb {
-  border: var(--color2) 3px solid;
+  border: var(--v-color2) 3px solid;
   background-color: transparent;
 }
 
 /*********** Firefox styles ***********/
 /* slider track */
 .video-range::-moz-range-track {
-  background-color: #ededed;
+  background-color: var(--v-color2);
   border-radius: 0.5rem;
   height: 0.5rem;
 }
 
 /* slider thumb */
 .video-range::-moz-range-thumb {
-  background-color: var(--color1);
+  background-color: var(--v-color1);
   border: none; /*Removes extra border that FF applies*/
 }
 
@@ -317,7 +383,7 @@ body {
 }
 
 .video-range:focus::-moz-range-thumb{
-  outline: 2px solid white;
+  outline: 2px solid var(--v-color2);
   outline-offset: 0.125rem;
 }
 
@@ -328,14 +394,14 @@ body {
 }
 
 #timeseek::-moz-range-thumb {
-  border: var(--color2) 3px solid;
+  border: var(--v-color2) 3px solid;
   border-radius: 50%;
   height: 1.5rem;
   width: 1.5rem;
 }
 
 #timeseek:not(:hover)::-moz-range-thumb {
-  border: var(--color2) 3px solid;
+  border: var(--v-color2) 3px solid;
   background-color: transparent;
 }
 

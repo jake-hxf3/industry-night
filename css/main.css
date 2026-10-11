@@ -209,7 +209,7 @@ body {
     transition: all 0.5s ease;
 }
 
-.video-controls.hide {
+.video-controls.hide:not(:has(:focus)) {
   animation: stay 3s cubic-bezier(0.38, 0.97, 0.56, 0.76) forwards;
   pointer-events: none;
 }

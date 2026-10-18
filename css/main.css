@@ -107,6 +107,30 @@ body {
 
 
 
+/* Hero Section */
+#hero {
+  padding: 0;
+}
+
+#hero-intro {
+  padding-inline: 15px;
+}
+  #hero-intro .svg-text {
+    fill: #b6282f;
+  }
+
+#hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+  #hero-title span {
+    display: block;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+
 /* Media Queries */
 @media screen and (min-width: 768px) {
   #burger {

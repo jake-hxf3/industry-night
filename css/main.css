@@ -138,24 +138,24 @@ header {
   }
 
 #hero-title {
+  width: 105vw;
   grid-row: 3/4;
   background-color: var(--bg-color1);
+  transform: rotate(-10deg) translateX(-10vw);
   margin-top: 70px;
-  padding: 30px;
+  padding: 60px 0 30px 20vw;
   color: white;
 }
-  #hero-title span {
-    display: block;
-    font-size: 3rem;
-    font-weight: 500;
+  #hero-title svg {
+    max-width: 367px;
   }
 
 #hero-image {
-  background-image: url(../images/fanshawe-icons-mobile.svg), linear-gradient(to bottom, #fff, #737373);
-  background-size: 105%;
+  background-image: url(../images/fanshawe-icons.svg), linear-gradient(to bottom, #fff, #737373);
+  background-size: 550px, cover;
+  background-position: 50% 20%;
   background-repeat: no-repeat;
-  background-position: 65% 0%;
-  height: 120vh;
+  height: 170vh;
   grid-row: 2/4;
   z-index: -1;
 }

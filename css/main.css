@@ -71,6 +71,7 @@ header {
     }
 
 #main-nav {
+    pointer-events: none;
     transform: translateY(-100%);
     transition: 0.5s all cubic-bezier(.7,.68,.22,1.0);
     background-color: var(--bg-color1);
@@ -105,6 +106,7 @@ header {
     }
 
 #main-nav:has(.collapsible) {
+  pointer-events: all;
   transform: translateY(0);
   -webkit-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.2); 
   box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.2);
@@ -115,7 +117,6 @@ header {
 /* Hero Section */
 #hero {
   padding: 150px 0 0;
-  grid-template-rows: auto 100vh;
 }
 
 #hero-intro {
@@ -130,7 +131,11 @@ header {
   font-size: 4rem;
   font-weight: 800;
   text-transform: uppercase;
-  grid-row: 2/3;
+  grid-row: 3/4;
+  background-color: var(--bg-color1);
+  transform: rotate(-10deg);
+  padding: 20px;
+  color: white;
 }
   #hero-title span {
     display: block;
@@ -139,9 +144,12 @@ header {
   }
 
 #hero-image {
-  background-image: url(../images/fanshawe_downtown_BW.jpg);
-  height: 100vh;
-  grid-row: 2/3;
+  background-image: url(../images/fanshawe-icons-mobile.svg), linear-gradient(to bottom, #fff, #737373);
+  background-size: 105%;
+  background-repeat: no-repeat;
+  background-position: 65% 0%;
+  height: 130vh;
+  grid-row: 2/4;
   z-index: -1;
 }
 
@@ -223,6 +231,10 @@ header {
       color: var(--bg-color1);
       font-weight: 700;
     }
+
+  #hero-image {
+    background-image: url(../images/fanshawe-icons-mobile.svg), linear-gradient(to bottom, #fff, #737373);
+  }
 }
 
 

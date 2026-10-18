@@ -129,6 +129,13 @@ header {
   padding: 150px 0 0;
 }
 
+#hero-text {
+  display: grid;
+  grid-row: 1/4;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+}
+
 #hero-intro {
   padding-inline: 15px;
   grid-row: 1/2;
@@ -140,9 +147,9 @@ header {
 #hero-title {
   width: 105vw;
   grid-row: 3/4;
+  margin-top: 70px;
   background-color: var(--bg-color1);
   transform: rotate(-10deg) translateX(-10vw);
-  margin-top: 70px;
   padding: 60px 0 30px 20vw;
   color: white;
 }
@@ -153,10 +160,10 @@ header {
 #hero-image {
   background-image: url(../images/fanshawe-icons.svg), linear-gradient(to bottom, #fff, #737373);
   background-size: 550px, cover;
-  background-position: 50% 20%;
+  background-position: 50% 30%;
   background-repeat: no-repeat;
   height: 170vh;
-  grid-row: 2/4;
+  grid-row: 1/4;
   z-index: -1;
 }
 
@@ -240,8 +247,41 @@ header {
       font-weight: 700;
     }
 
+
+  
+  #hero {
+    padding: 100px;
+    overflow: hidden;
+  }
   #hero-image {
-    background-image: url(../images/fanshawe-icons-mobile.svg), linear-gradient(to bottom, #fff, #737373);
+    background-position: -5% -80%;
+    background-repeat: no-repeat;
+    height: 90vh;
+    z-index: -1;
+  }
+
+  #hero-text {
+    grid-row: 1/4;
+    background-color: var(--bg-color1);
+    padding: 80px 0 0 11vw;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 23% 100%, 0% 13%);
+  }
+
+  #hero-intro {
+    grid-row: 1/2;
+    margin-right: 30px;
+  }
+
+  #hero-intro .svg-text {
+    fill: white;
+  }
+
+  #hero-title {
+    width: 100%;
+    grid-row: 2/4;
+    transform: rotate(-10deg);
+    background-color: transparent;
+    padding: 0;
   }
 }
 

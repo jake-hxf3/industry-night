@@ -17,9 +17,19 @@ body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
+/*--- Lookup ---*/
+  /* Header*/
+  /* Hero Section */
+  /* Video */
+
+/* --- --- */
+
+/* Header */
+
 header {
   position: fixed;
   width: 100vw;
+  z-index: 10;
 }
 
 #main-header {
@@ -128,13 +138,10 @@ header {
   }
 
 #hero-title {
-  font-size: 4rem;
-  font-weight: 800;
-  text-transform: uppercase;
   grid-row: 3/4;
   background-color: var(--bg-color1);
-  transform: rotate(-10deg);
-  padding: 20px;
+  margin-top: 70px;
+  padding: 30px;
   color: white;
 }
   #hero-title span {
@@ -148,7 +155,7 @@ header {
   background-size: 105%;
   background-repeat: no-repeat;
   background-position: 65% 0%;
-  height: 130vh;
+  height: 120vh;
   grid-row: 2/4;
   z-index: -1;
 }
@@ -195,6 +202,7 @@ header {
   }
 
   #main-nav {
+    pointer-events: all;
     transform: translateY(0);
     background-color: transparent;
   }

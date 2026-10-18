@@ -17,6 +17,11 @@ body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
+header {
+  position: fixed;
+  width: 100vw;
+}
+
 #main-header {
     transition: 0.25s 0.1s all cubic-bezier(.7,.68,.22,1.0);
 }
@@ -109,14 +114,16 @@ body {
 
 /* Hero Section */
 #hero {
+  background-color: aqua;
   padding: 0;
+  height: 100vh;
 }
 
 #hero-intro {
   padding-inline: 15px;
 }
   #hero-intro .svg-text {
-    fill: #b6282f;
+    fill: var(--bg-color1);
   }
 
 #hero-title {
@@ -130,6 +137,11 @@ body {
     font-weight: 500;
   }
 
+#hero-image {
+  background-image: url(../images/fanshawe_downtown_BW.jpg);
+  height: 100%;
+  grid-row: 1/-1;
+}
 
 /* Media Queries */
 @media screen and (min-width: 768px) {

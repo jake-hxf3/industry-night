@@ -55,16 +55,17 @@
                 </div>
             </div>
 
-
-            <div id="test"></div>
-            <section id="" class="grid-con hidden">
-                <div id="player-container" class="col-span-full custom-video">
-                    <video controls preload="metadata" poster="images/fanshawe_downtown_BW.jpg" data-duration="00:31">
+            <div class="full-width-grid-con">
+                <section id="showcase" class="grid-con col-start-2 col-end-3">
+                    <h2 class="col-start-2 col-end-5 m-col-start-1 m-col-end-6">The Showcase</h2>
+                    <p class="col-span-full m-col-start-1 m-col-end-6">Behold the our students' final term projects, to see if teamwork makes creative magic. Behold each student portfolios, to see what they express about their life ambitions and idiosyncracies.</p>
+                    <div id="player-container" class="col-span-full m-col-start-6 m-col-end-13 custom-video">
+                        <video controls preload="metadata" poster="images/fanshawe_downtown_BW.jpg" data-duration="00:31">
                         <source src="video/video.mp4" type="video/mp4">
                         <track kind="captions" src="video/captions-en.vtt" srclang="en" label="English" default>
                         <p>Your browser does not support HTML5 Video.</p>
-                    </video>
-                    <div class="video-controls" id="video-controls">
+                        </video>
+                        <div class="video-controls" id="video-controls">
                         <button aria-label="Play/Pause video" id="play-button" class="play">
                             <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="player-icon">
                                 <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
@@ -120,8 +121,8 @@
                         </button>
                     </div>
                 </div>
-            </section>
-            
+                </section>
+            </div>
         </main>
         <script src="js/main.js"></script>
         <script src="js/video.js"></script>

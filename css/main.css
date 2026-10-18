@@ -258,7 +258,7 @@ header {
   #hero-image {
     background-position: 5% 50%;
     background-repeat: no-repeat;
-    height: 130vh;
+    height: 150vh;
     z-index: -1;
   }
 
@@ -280,6 +280,7 @@ header {
 
   #hero-title {
     width: 100%;
+    margin-top: -5vh;
     grid-row: 2/4;
     transform: rotate(-10deg);
     background-color: transparent;
@@ -287,7 +288,7 @@ header {
   }
 
   #hero-title svg {
-    max-width: 90%;
+    max-width: 80%;
   }
 }
 

@@ -17,6 +17,21 @@ body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
+/*--- Lookup ---*/
+  /* Header*/
+  /* Hero Section */
+  /* Video */
+
+/* --- --- */
+
+/* Header */
+
+header {
+  position: fixed;
+  width: 100vw;
+  z-index: 10;
+}
+
 #main-header {
     transition: 0.25s 0.1s all cubic-bezier(.7,.68,.22,1.0);
 }
@@ -66,6 +81,7 @@ body {
     }
 
 #main-nav {
+    pointer-events: none;
     transform: translateY(-100%);
     transition: 0.5s all cubic-bezier(.7,.68,.22,1.0);
     background-color: var(--bg-color1);
@@ -100,6 +116,7 @@ body {
     }
 
 #main-nav:has(.collapsible) {
+  pointer-events: all;
   transform: translateY(0);
   -webkit-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.2); 
   box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.2);
@@ -109,26 +126,52 @@ body {
 
 /* Hero Section */
 #hero {
-  padding: 0;
+  padding: 150px 0 0;
+}
+
+#hero-text {
+  display: grid;
+  grid-row: 1/4;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
 }
 
 #hero-intro {
   padding-inline: 15px;
+  grid-row: 1/2;
 }
   #hero-intro .svg-text {
-    fill: #b6282f;
+    fill: var(--bg-color1);
   }
 
 #hero-title {
-  font-size: 4rem;
-  font-weight: 800;
-  text-transform: uppercase;
+  width: 105vw;
+  grid-row: 3/4;
+  margin-top: 70px;
+  background-color: var(--bg-color1);
+  transform: rotate(-10deg) translateX(-10vw);
+  padding: 60px 0 30px 20vw;
+  color: white;
 }
-  #hero-title span {
-    display: block;
-    font-size: 3rem;
-    font-weight: 500;
+  #hero-title svg {
+    max-width: 367px;
   }
+
+#hero-image {
+  background-image: url(../images/fanshawe-icons.svg), linear-gradient(to bottom, #fff, #737373);
+  background-size: 550px, cover;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  height: 170vh;
+  grid-row: 1/4;
+  z-index: -1;
+}
+
+#test {
+  height: 200vh;
+}
+
+
 
 
 /* Media Queries */
@@ -166,6 +209,7 @@ body {
   }
 
   #main-nav {
+    pointer-events: all;
     transform: translateY(0);
     background-color: transparent;
   }
@@ -202,6 +246,43 @@ body {
       color: var(--bg-color1);
       font-weight: 700;
     }
+
+
+  
+  #hero {
+    padding: 100px;
+    overflow: hidden;
+  }
+  #hero-image {
+    background-position: -5% -80%;
+    background-repeat: no-repeat;
+    height: 90vh;
+    z-index: -1;
+  }
+
+  #hero-text {
+    grid-row: 1/4;
+    background-color: var(--bg-color1);
+    padding: 80px 0 0 11vw;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 23% 100%, 0% 13%);
+  }
+
+  #hero-intro {
+    grid-row: 1/2;
+    margin-right: 30px;
+  }
+
+  #hero-intro .svg-text {
+    fill: white;
+  }
+
+  #hero-title {
+    width: 100%;
+    grid-row: 2/4;
+    transform: rotate(-10deg);
+    background-color: transparent;
+    padding: 0;
+  }
 }
 
 

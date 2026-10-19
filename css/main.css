@@ -11,16 +11,28 @@
   --v-color2: #ededed;
   --hover1: #f93f3f;
   --text-col1: #333333;
+  font-size: clamp(12px, 5vw, 18px);
 }
 
 body {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 350;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
 }
 
 /*--- Lookup ---*/
   /* Header*/
   /* Hero Section */
-  /* Video */
+  /* Showcase */
 
 /* --- --- */
 
@@ -129,6 +141,7 @@ header {
   padding: 150px 0 0;
   width: 100vw;
   max-width: unset;
+  z-index: 2;
 }
 
 #hero-text {
@@ -141,6 +154,7 @@ header {
 #hero-intro {
   padding-inline: 15px;
   grid-row: 1/2;
+  max-width: 70%;
 }
   #hero-intro .svg-text {
     fill: var(--bg-color1);
@@ -148,31 +162,68 @@ header {
 
 #hero-title {
   width: 105vw;
+  aspect-ratio: 2/1;
   grid-row: 3/4;
-  margin-top: 70px;
   background-color: var(--bg-color1);
-  transform: rotate(-10deg) translateX(-10vw);
-  padding: 60px 0 30px 20vw;
+  transform: rotate(-10deg) translate(-12vw, 10vw);
+  padding: 10vw 20vw 25vw;
+  padding-right: 0;
   color: white;
 }
   #hero-title svg {
-    max-width: 367px;
+    max-width: 60%;
   }
 
 #hero-image {
   background-image: url(../images/fanshawe-icons.svg), linear-gradient(to bottom, #fff, #737373);
-  background-size: 550px, cover;
-  background-position: 50% 30%;
+  background-size: 90vw, cover;
+  background-position: 50% 20%;
   background-repeat: no-repeat;
-  height: 170vh;
+  height: min(100vh,200vw);
   grid-row: 1/4;
-  z-index: -1;
+  z-index: -10;
 }
 
-#test {
-  height: 200vh;
+/* Showcase */
+#showcase-con {
+  background-color: var(--bg-color1);
+  position: relative;
+  z-index: 3;
+  padding-bottom: 25vw;
 }
 
+#showcase {
+  align-content: start;
+}
+
+#showcase-text {
+  background-color: var(--bg-color1);
+  align-content: start;
+  color: white;
+  border-top: 3px solid white;
+  padding-inline: 5vw;
+  padding-bottom: 5px;
+}
+
+#showcase-text h2 {
+  text-align: right;
+  margin-block: 1ch;
+}
+
+#showcase-text p {
+  line-height: 3ch;
+}
+
+#showcase-player {
+  background-image: linear-gradient(-10deg, #fff 0%, #fff 80%, #ffffff00 calc(80% + 1px));
+  padding-top: 25vw;
+}
+
+#player-container {
+  margin-inline: 15px;
+  -webkit-box-shadow: 3px 7px 7px 7px rgba(0, 0, 0, 0.2); 
+  box-shadow: 3px 7px 7px 7px rgba(0,0,0,0.2);
+}
 
 
 
@@ -253,25 +304,28 @@ header {
   
   #hero {
     padding-top: 100px;
-    overflow: hidden;
+    overflow-x: hidden;
   }
   #hero-image {
     background-position: 5% 50%;
+    background-size: 500px, cover;
     background-repeat: no-repeat;
-    height: 150vh;
+    height: 130vh;
+    max-height: 60vw;
     z-index: -1;
   }
 
   #hero-text {
     grid-row: 1/4;
     background-color: var(--bg-color1);
-    padding: 80px 0 0 18vw;
+    padding: 80px 0 0 10vw;
     clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 23% 100%, 0% 13%);
   }
 
   #hero-intro {
     grid-row: 1/2;
     margin-right: 30px;
+    max-width: none;
   }
 
   #hero-intro .svg-text {
@@ -282,7 +336,7 @@ header {
     width: 100%;
     margin-top: -5vh;
     grid-row: 2/4;
-    transform: rotate(-10deg);
+    transform: rotate(-7deg);
     background-color: transparent;
     padding: 0;
   }
@@ -290,6 +344,40 @@ header {
   #hero-title svg {
     max-width: 80%;
   }
+
+
+
+  #showcase-con {
+    background-color: transparent;
+    background-image: linear-gradient(1deg, #fff 0%, #fff 90%, #ffffff00 calc(90% + 1px));
+    padding-top: 15vh;
+    margin-top: -15vh;
+  }
+
+  #showcase {
+    margin-top: 15vh;
+  }
+
+  #showcase-text {
+    background-color: transparent;
+    color: var(--text-col1);
+    border: none;
+    padding-inline: 0;
+  }
+
+  #showcase-text h2 {
+    text-align: left;
+  }
+
+  #showcase-text p {
+    font-weight: 450;
+  }
+
+  #showcase-player {
+    background-image: none;
+    padding-top: 0;
+  }
+
 }
 
 
@@ -300,7 +388,8 @@ header {
 
 /*Video Player*/
 .custom-video {
-    margin-block: 1rem;
+    aspect-ratio: 16/9;
+    margin-block: 1em;
     position: relative;
     /* allow the video to expland to full screen and stack properly */
     display: flex;
@@ -317,7 +406,7 @@ header {
     right: 0;
     left: 0;
     bottom: 0;
-    padding: 0.25rem 1rem 0.5rem;
+    padding: 0.25em 1em 0.5em;
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,1));
     display: none;
     transition: all 0.5s ease;
@@ -354,8 +443,8 @@ header {
 
 .player-icon {
     color: var(--v-color1);
-    width: 2rem;
-    height: 2rem;
+    width: 2em;
+    height: 2em;
     cursor: pointer;
     transition: 0.2s color linear;
 }
@@ -386,9 +475,9 @@ header {
 
 .videotext {
   color: white;
-  font-size: 1rem;
+  font-size: 1em;
   font-family: Arial, Helvetica, sans-serif;
-  margin-right: 0.95rem;
+  margin-right: 0.95em;
 }
 
 
@@ -410,8 +499,8 @@ header {
 /* slider track */
 .video-range::-webkit-slider-runnable-track {
   background-color: var(--v-color2);
-  border-radius: 0.5rem;
-  height: 0.5rem;
+  border-radius: 0.5em;
+  height: 0.5em;
 }
 
 /* slider thumb */
@@ -430,7 +519,7 @@ header {
 
 .video-range:focus-visible::-webkit-slider-thumb {
   outline: 2px solid var(--v-color2);
-  outline-offset: 0.125rem;
+  outline-offset: 0.125em;
 } 
 
 
@@ -458,9 +547,9 @@ header {
 
 #change-vol::-webkit-slider-thumb {
   margin-top: -4px; /* Centers thumb on the track */
-  border-radius: 0.2rem;
-  height: 1.25rem;
-  width: 1rem;
+  border-radius: 0.2em;
+  height: 1.25em;
+  width: 1em;
 }
 
 
@@ -468,8 +557,8 @@ header {
   border: var(--v-color2) 3px solid;
   margin-top: -6px;
   border-radius: 50%;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1.5em;
+  width: 1.5em;
 }
 
 #timeseek:not(:hover)::-webkit-slider-thumb {
@@ -481,8 +570,8 @@ header {
 /* slider track */
 .video-range::-moz-range-track {
   background-color: var(--v-color2);
-  border-radius: 0.5rem;
-  height: 0.5rem;
+  border-radius: 0.5em;
+  height: 0.5em;
 }
 
 /* slider thumb */
@@ -498,20 +587,20 @@ header {
 
 .video-range:focus::-moz-range-thumb{
   outline: 2px solid var(--v-color2);
-  outline-offset: 0.125rem;
+  outline-offset: 0.125em;
 }
 
 #change-vol::-moz-range-thumb {
-  border-radius: 0.2rem;
-  height: 1.25rem;
-  width: 1rem;
+  border-radius: 0.2em;
+  height: 1.25em;
+  width: 1em;
 }
 
 #timeseek::-moz-range-thumb {
   border: var(--v-color2) 3px solid;
   border-radius: 50%;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1.5em;
+  width: 1.5em;
 }
 
 #timeseek:not(:hover)::-moz-range-thumb {
@@ -522,13 +611,13 @@ header {
 
 @keyframes expand {
   0% {width: 0;}
-  75% {width: 7rem;}
-  100% {width: 7rem;}
+  75% {width: 7em;}
+  100% {width: 7em;}
 }
 
 @media screen and (min-width: 768px) {
 .player-icon{
-  margin-left: 1.25rem;
+  margin-left: 1.25em;
 }
 
 .stop {
@@ -536,11 +625,11 @@ header {
 }
 
 #change-vol::-webkit-slider-thumb {
-  margin-top: -0.325rem;
+  margin-top: -0.325em;
 }
 
 #timeseek::-webkit-slider-thumb {
-  margin-top: -0.5rem;
+  margin-top: -0.5em;
 }
 
 .seeking:has(+.volume:hover) #timeseek {
@@ -550,7 +639,7 @@ header {
 
 @media screen and (min-width: 380px) {
   .video-controls {
-    padding: 1.25rem;
+    padding: 1.25em;
   }
 
   .volume:is(:hover,:has(:focus)) #change-vol {

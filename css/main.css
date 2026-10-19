@@ -275,6 +275,19 @@ header {
 }
 
 /* Portfolios Section */
+#portfolio-con {
+  background-color: var(--color2);
+  min-height: 100vw;
+  padding-block: 15vw;
+  clip-path: polygon(0% 0%, 100% 7%, 100% 100%, 0% 93%);
+  z-index: 4;
+  position: relative;
+}
+
+#portfolios {
+  height: fit-content;
+}
+
 .list-reset {
   list-style: none;
   padding: 0;
@@ -284,32 +297,34 @@ header {
 #portfolio-pagination {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: start;
+  margin: 15px 0;
 }
 
-#portfolio-pagination li {
-  margin-block: 5px;
-}
-
-#portfolio-pagination a {
+#portfolio-pagination button {
   display: block;
   color: inherit;
   text-decoration: none;
-  padding: 10px;
-  border-radius: 7px;
-  background-color: var(--color2);
+  padding: 15px 30px;
+  border: #737373 solid 2px;
   transition: 0.5s all ease-in-out;
+  cursor: pointer;
+  margin: 5px;
+  font-family: inherit;
+  font-weight: 500;
 }
 
-#portfolio-pagination a:hover {
-  background-color: var(--hover1);
+#portfolio-pagination button:hover {
+  border-color: #00000000;
+  background-color: var(--bg-color1);
   color: white;
 }
 
 .student {
   padding: 15px;
   margin-block: 10px;
-  background-color: var(--color2);
+  background-color: white;
+  filter: drop-shadow(5px 5px 5px #0000006e);
 }
 
 .student span {
@@ -534,7 +549,7 @@ footer hr {
 
 
   #project-con {
-    min-height: 50vw;
+    min-height: 100vw;
   }
 
   #project-con .project {
@@ -563,7 +578,7 @@ footer hr {
   }
 
   #project-det {
-    margin-top: 50%;
+    margin-top: 90%;
   }
 
 

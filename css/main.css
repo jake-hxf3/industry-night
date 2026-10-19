@@ -11,6 +11,7 @@
   --v-color2: #ededed;
   --hover1: #f93f3f;
   --text-col1: #333333;
+  font-size: clamp(12px, 5vw, 24px);
 }
 
 body {
@@ -22,6 +23,10 @@ body {
 h2 {
   font-size: 2rem;
   font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
 }
 
 /*--- Lookup ---*/

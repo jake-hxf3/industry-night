@@ -14,7 +14,13 @@
 }
 
 body {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 450;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 /*--- Lookup ---*/
@@ -141,6 +147,7 @@ header {
 #hero-intro {
   padding-inline: 15px;
   grid-row: 1/2;
+  max-width: 70%;
 }
   #hero-intro .svg-text {
     fill: var(--bg-color1);
@@ -151,18 +158,18 @@ header {
   grid-row: 3/4;
   margin-top: 70px;
   background-color: var(--bg-color1);
-  transform: rotate(-10deg) translateX(-10vw);
-  padding: 60px 0 30px 20vw;
+  transform: rotate(-10deg) translate(-12vw, 10vh);
+  padding: 60px 0 20vh 20vw;
   color: white;
 }
   #hero-title svg {
-    max-width: 337px;
+    max-width: 70%;
   }
 
 #hero-image {
   background-image: url(../images/fanshawe-icons.svg), linear-gradient(to bottom, #fff, #737373);
-  background-size: 550px, cover;
-  background-position: 50% 30%;
+  background-size: 500px, cover;
+  background-position: 50% 10vh;
   background-repeat: no-repeat;
   height: 170vh;
   grid-row: 1/4;
@@ -174,6 +181,10 @@ header {
   align-content: start;
   background-color: white;
   z-index: 3;
+}
+
+#showcase-text h2 {
+  text-align: right;
 }
 
 
@@ -275,6 +286,7 @@ header {
   #hero-intro {
     grid-row: 1/2;
     margin-right: 30px;
+    max-width: none;
   }
 
   #hero-intro .svg-text {

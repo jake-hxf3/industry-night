@@ -232,6 +232,19 @@ header {
 
 
 /* Events Section */
+#project-con .project:first-child {
+  background-color: var(--bg-color1);
+  color: white;
+}
+
+#project-con .project:nth-child(2) {
+  background-color: #333333;
+}
+
+#project-con .project:nth-child(3) {
+  background-color: #737373;
+}
+
 
 #project-det {
   text-align: left;
@@ -402,20 +415,17 @@ header {
   }
 
   #project-con .project:first-child {
-    background-color: var(--bg-color1);
     color: white;
     z-index: 3;
     clip-path: polygon(62% 27%, 52% 100%, 0% 100%, 0% 20%);
   }
 
   #project-con .project:nth-child(2) {
-    background-color: #333333;
     z-index: 2;
     clip-path: polygon(95% 20%, 88% 100%, 0% 100%, 0% 0%);
   }
 
   #project-con .project:nth-child(3) {
-    background-color: #737373;
     z-index: 1;
     clip-path: polygon(100% 10%, 100% 100%, 0% 100%, 0% 0%);
   }

@@ -34,10 +34,17 @@ p {
   font-size: 1rem;
 }
 
+
+.test {
+  height: 100vh;
+}
 /*--- Lookup ---*/
   /* Header*/
   /* Hero Section */
-  /* Showcase */
+  /* Showcase Section */
+  /* Exhibit Section */
+  /* Portfolio Section */
+  /* Testimonials Section */
 
 /* --- --- */
 
@@ -428,8 +435,8 @@ header {
   #project-con .project:first-child {
     color: white;
     clip-path: polygon(72% 27%, 60% 100%, 0% 100%, 0% 10%);
-    height: unset;
     padding: 0;
+    padding-bottom: 5vw;
     grid-row: 1/-1;
   }
 
@@ -447,7 +454,7 @@ header {
   }
 
   #project-det {
-    margin-top: 80%;
+    margin-top: 50%;
   }
 }
 

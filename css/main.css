@@ -156,25 +156,30 @@ header {
 
 #hero-title {
   width: 105vw;
+  aspect-ratio: 2/1;
   grid-row: 3/4;
-  margin-top: 70px;
   background-color: var(--bg-color1);
-  transform: rotate(-10deg) translate(-12vw, 10vh);
-  padding: 60px 0 20vh 20vw;
+  transform: rotate(-10deg) translate(-12vw, 10vw);
+  padding: 10vw 20vw 25vw;
+  padding-right: 0;
   color: white;
 }
   #hero-title svg {
-    max-width: 70%;
+    max-width: 60%;
   }
 
 #hero-image {
   background-image: url(../images/fanshawe-icons.svg), linear-gradient(to bottom, #fff, #737373);
-  background-size: 500px, cover;
-  background-position: 50% 10vh;
+  background-size: 90vw, cover;
+  background-position: 50% 20%;
   background-repeat: no-repeat;
-  height: 170vh;
+  height: min(100vh,200vw);
   grid-row: 1/4;
   z-index: -1;
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+
 }
 
 /* Showcase */
@@ -288,15 +293,17 @@ header {
   }
   #hero-image {
     background-position: 5% 50%;
+    background-size: 500px, cover;
     background-repeat: no-repeat;
-    height: 150vh;
+    height: 130vh;
+    max-height: 60vw;
     z-index: -1;
   }
 
   #hero-text {
     grid-row: 1/4;
     background-color: var(--bg-color1);
-    padding: 80px 0 0 18vw;
+    padding: 80px 0 0 10vw;
     clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 23% 100%, 0% 13%);
   }
 

@@ -51,7 +51,8 @@ body, p, h1, h2, h3, h4, h5 {
    padding: 20px;
    text-align: center;
    margin-top: 10px;
-   margin-bottom:10px;
+   margin-bottom: 10px;
+   height: 50vw;
  }
 
  .center-grid-con {
@@ -78,6 +79,7 @@ body, p, h1, h2, h3, h4, h5 {
    display: grid;
    grid-template-columns: subgrid;
 }
+
 
 .col-span-1	{grid-column: span 1;}
 .col-span-2	{grid-column: span 2;}

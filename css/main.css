@@ -15,7 +15,8 @@
 
 body {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  font-weight: 450;
+  font-weight: 350;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -181,12 +182,28 @@ header {
   align-content: start;
   background-color: white;
   z-index: 3;
+  height: 100vh;
+}
+
+#showcase-text {
+  background-color: var(--bg-color1);
+  color: white;
+  border-top: 3px solid white;
+  padding-inline: 35px;
 }
 
 #showcase-text h2 {
   text-align: right;
+  margin-block: 1ch;
 }
 
+#showcase-text p {
+  line-height: 3ch;
+}
+
+#player-container {
+  margin-inline: 15px;
+}
 
 
 

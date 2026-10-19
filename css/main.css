@@ -549,7 +549,7 @@ footer hr {
 
 
   #project-con {
-    min-height: 100vw;
+    min-height: 70vw;
   }
 
   #project-con .project {
@@ -560,7 +560,7 @@ footer hr {
     color: white;
     clip-path: polygon(72% 27%, 60% 100%, 0% 100%, 0% 10%);
     padding: 0;
-    padding-bottom: 5vw;
+    padding: 25vh 0;
     grid-row: 1/-1;
   }
 
